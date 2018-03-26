@@ -365,11 +365,11 @@ void ModelViewer::resetCamera()
 {
     if(mpModel)
     {
-        // update the camera position
-        float Radius = mpModel->getRadius();
-        const glm::vec3& ModelCenter = mpModel->getCenter();
-        glm::vec3 CamPos = ModelCenter;
-        CamPos.z += Radius * 5;
+		// update the camera position
+		float Radius = mpModel->getRadius();
+		const glm::vec3& ModelCenter = mpModel->getCenter();
+		glm::vec3 CamPos = ModelCenter;
+		CamPos.z += Radius * 5;
 
         mpCamera->setPosition(CamPos);
         mpCamera->setTarget(ModelCenter);
